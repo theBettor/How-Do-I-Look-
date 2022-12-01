@@ -8,10 +8,26 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let mainLabel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        setup()
+        AutoLayout()
+    }
+    func setup() {
+        mainLabel.text = "준비해라잉"
+//        mainLabel.textColor = .red
+//        view.backgroundColor = 
+        view.addSubview(mainLabel)
+    }
+    func AutoLayout() {
+        mainLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        mainLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        mainLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
 
 
